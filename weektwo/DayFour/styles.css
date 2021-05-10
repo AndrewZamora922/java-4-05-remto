@@ -1,0 +1,29 @@
+#navbarNavDropdown {
+    float:left;
+    padding-left:780px;
+}
+
+.full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+/* img {
+    float: auto;
+    width:33%;
+    height:auto;
+}
+
+img {
+    float: auto;
+    width:33;
+    height:auto;
+}
+
+img {
+    float: auto;
+    width:33%;
+    height:auto;
+} */
+
