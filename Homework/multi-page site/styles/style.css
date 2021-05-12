@@ -1,0 +1,156 @@
+body {
+    background-color: grey;
+    font-family: 'Berkshire Swash'; cursive:
+}
+
+.background {
+    position: relative;
+    text-align: center;
+    color: grey;
+}
+
+.centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 5000px;
+}
+
+.collapse {
+      text-align: center;
+      margin: auto;
+      display: inline-block;
+}
+
+.navbar-brand img {
+  height: 80px;
+  width: 80px;
+}
+
+.nav-link img {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+
+.form-control {
+      height: 30px;
+      width: 300px;
+      position: relative;
+      /* margin: auto;
+      display: inline-block; */
+}
+
+.form-control img {
+  position: center;
+  height: 50px;
+  width: 50px;
+}
+
+.btn {
+    height: 50px;
+    width: 50px;
+}
+
+.add-button {
+      float: right;
+      margin: auto;
+      display: inline-block;
+} 
+  
+.header {
+      text-align: center;
+}
+
+.div-8  {
+  padding-left: 100px;
+}
+
+.div-1 {
+    float:left; 
+    text-align: center;
+    width:33.33333333%;
+    height:100px;
+}
+
+.div-2 {
+    float:left;    
+    text-align: center;
+    width:33.3333333%;
+    height:100px;
+}
+
+.div-3 {
+    float:right;
+    text-align: center;
+    width:33.3333333%;
+    height:100px;
+}
+
+.div-4 {
+      text-align: center;
+      padding-top: 80px;
+}
+
+.div-5 {
+    background-color: grey;
+    text-align: center;
+}
+
+.div-6 {
+      float:left;
+      width: 50%;
+    padding-left: 100px;
+}
+
+.div-7 {
+      float: right;
+      text-align: center;
+      width: 50%;
+      /* padding-left: 200px; */
+}
+
+footer {
+    text-align: center;
+    padding-top: 400px;
+}
+
+.footer h3 {
+      position: relative;
+}
+
+.div-1 a:link {
+      color: teal;
+}
+
+.div-1 a:visited {
+    color: indigo;
+}
+
+.div-1 a:hover {
+    color: rgb(7, 50, 107);
+}
+
+.div-1 a:active {
+    color: red;
+}
+
+.footer a:link {
+    color: teal;
+}
+
+.footer a:link {
+    color: indigo;
+}
+
+.footer a:link {
+    color: rgb(7, 50, 107);
+}
+
+.footer a:link {
+    color: red;
+}
+
