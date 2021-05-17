@@ -1,7 +1,7 @@
 package com.company.vehicle;
 
 public class VehicleClass {
-// private constant (INTERNAL)
+    // private constant (INTERNAL)
     private static final int MAX_DOORS = 6;
     private static final int MIN_DOORS = 1;
 
@@ -11,12 +11,13 @@ public class VehicleClass {
 
     private String carType;
 
+
     private String color;
     private int numberOfDoors;
-// no-args constructor
+    // no-args constructor
     public VehicleClass(){
-        color = "blue";
-        numberOfDoors = 3;
+        //color = "blue";
+        //numberOfDoors = 3;
     }
 
     // constructor with arguments or all args constructor
@@ -25,55 +26,49 @@ public class VehicleClass {
         this.numberOfDoors = numberOfDoors;
     }
 
-
-    // single argument constructor
-    public VehicleClass (String color){
-        this.color = color;
-        this.numberOfDoors = numberOfDoors;
-    }
-
+//    // single argument constructor
+//    public VehicleClass (String color){
+//        this.color = color;
+////        this.numberOfDoors = numberOfDoors;
+//    }
 
     // getters
     public String getColor(){
         return color;
     }
-
     public String getCarType(){
-        return carType();
+        return carType;
     }
-
     public int getNumberOfDoors(){
         return numberOfDoors;
     }
 
-//    setter
-
+    //    setters
     public void setColor(String color){
-        this.color = color; }
+        this.color = color;
+    }
     public void setCarType(String carType){
-        this.getCarType = carType; }
-
-
+        this.carType = carType;
+    }
     public void setNumberOfDoors(int numberOfDoors){
         if(MIN_DOORS >= 1 && numberOfDoors <= MAX_DOORS){
             this.numberOfDoors = numberOfDoors;
         }else{
             this.numberOfDoors = -1;
         }
+
     }
-
-
-
-
 
     public void start(){
-        System.out.println("Car is Starting");
+        System.out.println("Car is starting");
     }
-
     public void stop(){
         System.out.println("Car is drifting");
     }
     public void drive(){
-        System.out.println("Car is racing");
+        System.out.println("Car is racing ");
     }
+
+
+
 }
