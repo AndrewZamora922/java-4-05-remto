@@ -1,0 +1,51 @@
+body {
+    font-family: 'Berkshire Swash'; cursive:
+}
+
+.div-1 button {
+    float: right;  
+    color: rgb(248, 18, 18);
+    font-size: large;
+    position:top;
+}
+
+.div1 :link{
+    color: red;
+}
+
+.div1 :hover {
+    color:red
+}
+
+.beerfinder-title {
+    text-align: center;
+    font-size: larger;
+}
+
+.col-md-5 {
+    font-size: larger;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.draught-only {
+    font-size: larger;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.form-control {
+    height: 100px;
+    width: 900px;
+}
+
+.div-2 {
+    background-color: black;
+    height: 80px;
+}
+
+.div-2 ::placeholder {
+    text-align: center;
+    color: black;
+    font-size: larger;
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Beers</title>
+    <script src="styles/style2.css"></script>
+    <link rel="stylesheet" type="text/css" href="styles/style2.css" />
+  </head>
+  <div ng-app="beerApp" class="ng-scope">
+    <div
+      class="beerfinder-modal modal fade ng-scope in"
+      ng-controller="beerFinderCrtl"
+      aria-hidden="false"
+      style="display: block"
+    >
+      <div class="modal-dialog">
+        <div class="modal-contant row">
+          <div class="modal-header">
+            <div class="close-button-wrapper" data dismiss="modal">
+              <div class="x-button-wrapper">
+                <div class="div-1">
+                  <button
+                    type="button"
+                    onclick="window.open('', '_self', ''); window.close();"
+                  ><a href="index.html">X</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="beerfinder-title">
+              <h2 class="ng-binding">Beer Finder</h2>
+            </div>
+            <div class="modal-title-underline"></div>
+          </div>
+          <div class="div-2">
+            <div class="modal-body">
+              <div id="beer-finder">
+                <div class="inner-wrapper">
+                  <div class="beer-search row">
+                    <i class="fa fa-search"></i>
+                    <div class="col-md-5 col-lg-6">
+                      <!-- <input
+                      ng-focus="hideDetail"
+                      class="form-control ng-pristine ng-untouched ng-valid"
+                      id="beerSearch"
+                      ng-model="beerFilter"
+                      type="text"
+                    /> -->
+                      <input
+                        class="form-control me-2"
+                        type="search"
+                        aria-label="search"
+                      />
+                      <label class="search-label" for="beerSearch">
+                        <br />
+                        Search by: Brew, Brewery, City, State, or Style</label
+                      >
+                    </div>
+                    <div class="col-md-6 col-lg-5 draught-only">
+                      <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Draught Only"
+                        aria-label="search"
+                      />
+                      <!-- <label class="search-label" for="beerSearch"></label> -->
+                      <label for="draught-only"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <body>
+    <dl>
+      <dd>512 Black IPA</dd>
+      <dd>Abita Purple Haze</dd>
+      <dd>Alamo Davy Bockett</dd>
+      <dd>Altstadt Kolsch</dd>
+      <dd>Austin</dd>
+      <dd>Eastciders Blackberry Cider (CAN)</dd>
+      <dd>Austin Eastciders Original Dry Cider</dd>
+      <dd>Austin Eastciders Pineapple Cider</dd>
+      <dd>Avery Reverend (CAN)</dd>
+      <dd>Avery White Rascal</dd>
+      <dd>Ayinger Celebrator</dd>
+      <dd>Ballast Point Sculpin IPA</dd>
+      <dd>aptist Wit</dd>
+      <dd>Becks N/A (BTL)</dd>
+      <dd>Belching Beaver Deftones Phantom Bride (Can)</dd>
+      <dd>Belching Beaver Peanut Butter Milk Stout (Can)</dd>
+      <dd>Belching Beaver ¡Viva la Beaver! (Can)</dd>
+      <dd>Bells Oberon</dd>
+      <dd>Bells Official</dd>
+      <dd>Black 'n Tan</dd>
+      <dd>Black Velvet</dd>
+      <dd>Blue Owl Little Gose</dd>
+      <dd>Bosteels Tripel Karmeliet</dd>
+      <dd>Bosteels Tripel Karmeliet (BTL)</dd>
+      <dd>Boulevard Bourbon Barrel Quad (BTL)</dd>
+      <dd>Boulevard Unfiltered Wheat</dd>
+      <dd>Breckenridge Dry Irish Stout (NITRO)</dd>
+      <dd>Brooklyn Pulp Art</dd>
+      <dd>Brooklyn Summer Bud Light (CAN)</dd>
+      <dd>Build Your Flight Chimay</dd>
+      <dd>Barrel Aged Grand Reserve (BTL)</dd>
+      <dd>Chimay Cinq Cents (BTL)</dd>
+      <dd>Chimay Grande Reserve (BTL)</dd>
+      <dd>Chimay Premiere (BTL)</dd>
+      <dd>Circle Envy (CAN)</dd>
+      <dd>City Orchard Cherry</dd>
+      <dd>Red Cider (CAN)</dd>
+      <dd>City Orchard Lavender Royale (CAN)</dd>
+      <dd>Coors (CAN) D9 Brewers</dd>
+      <dd>Day Off (CAN)</dd>
+      <dd>D9 Hakuna Matata (CAN)</dd>
+      <dd>D9 Whiskers on Kittens (BTL)</dd>
+      <dd>Delirium Black Barrel Aged</dd>
+      <dd>Delirium Nocturnum (BTL)</dd>
+      <dd>Delirium Tremens (CAN)</dd>
+      <dd>Deschutes Black Butte XXXII (BTL)</dd>
+      <dd>Deschutes Fresh Squeezed IPA</dd>
+      <dd>Deschutes The Dissident (BTL)</dd>
+      <dd>Dogfish Head 120 Minute IPA (BTL)</dd>
+      <dd>Dogfish Head 60 Minute IPA</dd>
+      <dd>Dogfish Head 60 Minute IPA (BTL)</dd>
+      <dd>Dogfish Head 90 Minute IPA (BTL)</dd>
+      <dd>Drie Fonteinen Oude Geuze (BTL)</dd>
+      <dd>Duchesse de Bourgogne Cherry (BTL)</dd>
+      <dd>Duvel (BTL)</dd>
+      <dd>Duvel Single (CAN)</dd>
+      <dd>Duvel Triple Hop Citra (BTL)</dd>
+      <dd>El Segundo Radioactive Fallout (CAN)</dd>
+      <dd>Epic Big Bad Baptist Imperial Stout (BTL)</dd>
+      <dd>Epic Midnight Munchies (CAN)</dd>
+      <dd>Fair State Big Doinks</dd>
+      <dd>Fair State x Blackstack x Modist Dream Universe no.755 (CAN)</dd>
+      <dd>Fair State x Pulpit Rock Main Boss (CAN)</dd>
+      <dd>Fifty Fifty BART (CAN)</dd>
+      <dd>Fifty Fifty Eclipse - Bourbon Barrel Cuvee (BTL)</dd>
+      <dd>Firestone Walker Barrelworks: Champs de Fraise (BTL)</dd>
+      <dd>Flensburger Pilsener</dd>
+      <dd>Founders 4 Giants Double IPA (CAN)</dd>
+      <dd>Founders All Day IPA</dd>
+      <dd>Founders All Day Vacay Founders Curmudgeon's Better Half (BTL)</dd>
+      <dd>Founders Mas Agave Hard Seltzer (CAN)</dd>
+      <dd>Freetail Bat Outta Helles</dd>
+      <dd>Great Divide Yeti</dd>
+      <dd>Green Flash West Coast IPA</dd>
+      <dd>Guinness Draught</dd>
+      <dd>Gulden Draak</dd>
+      <dd>Hacker-Pschorr Weisse</dd>
+      <dd>Half and Half</dd>
+      <dd>Hofbrau Dunkel</dd>
+      <dd>Hummingbird H20</dd>
+      <dd>Jester King Super Ultramega Hyperforce (BTL)</dd>
+      <dd>Kaliber (BTL)</dd>
+      <dd>Karbach Free & Easy N/A IPA (CAN)</dd>
+      <dd>Karbach Love Street</dd>
+      <dd>Karbach Love Street (CAN)</dd>
+      <dd>Kunstler Pure Southtown</dd>
+      <dd>Lagunitas A Little Sumpin' Sumpin' Ale</dd>
+      <dd>Lagunitas Hazy Memory (CAN)</dd>
+      <dd>Lagunitas IPA</dd>
+      <dd>Lagunitas Waldo</dd>
+      <dd>Lagunitas Waldo's Special Ale (BTL)</dd>
+      <dd>Left Hand Milk Stout (NITRO)</dd>
+      <dd>Lindemans Framboise</dd>
+      <dd>Live Oak Hefe-Weizen</dd>
+      <dd>Lonestar (CAN)</dd>
+      <dd>Longtab OG</dd>
+      <dd>Maine Beer Company Spring (BTL)</dd>
+      <dd>Maine Beer Company Wolfe's Neck (BTL)</dd>
+      <dd>Martin House Cherry Baby Seltzer (CAN)</dd>
+      <dd>Martin House Grapeful 8 (Can)</dd>
+      <dd>Martin house Honeysuckle (CAN)</dd>
+      <dd>Martin House Miss Marmalade (CAN)</dd>
+      <dd>Martin House Orange Cinnamon Roll (CAN)</dd>
+      <dd>Meridian Hive Blackberry (CAN)</dd>
+      <dd>Miller Lite (CAN)</dd>
+      <dd>Modern Times Caliban (CAN)</dd>
+      <dd>Modern Times Orderville (CAN)</dd>
+      <dd>Mystery Beer Cans (CAN)</dd>
+      <dd>New Belgium Voodoo Ranger American Haze IPA</dd>
+      <dd>New Holland Dragons Milk</dd>
+      <dd>NOLA Tangerine Wheat</dd>
+      <dd>orth Coast Old Rasputin NITRO</dd>
+      <dd>North Coast Old Stock (BTL)</dd>
+      <dd>North Coast Scrimshaw Pilsner</dd>
+      <dd>Oak Highlands AllGood (CAN)</dd>
+      <dd>Oak Highlands DF Dub (CAN)</dd>
+      <dd>Oak Highlands Freaky Deaky (CAN)</dd>
+      <dd>Odd Side Ales Pina Colada Seltzer (CAN)</dd>
+      <dd>Odell Peach Stand Rambler</dd>
+      <dd>Odell Tree Shaker Mango</dd>
+      <dd>Ommegang Hennepin (BTL)</dd>
+      <dd>Ommegang Three Philosophers (BTL)</dd>
+      <dd>Oskar Blues Barrel Aged Ten Fidy (CAN)</dd>
+      <dd>Pabst Blue Ribbon (CAN)</dd>
+      <dd>Paulaner Oktoberfest Marzen</dd>
+      <dd>Piraat</dd>
+      <dd>Prairie Blueberry Boyfriend</dd>
+      <dd>Radeberger Pilsner</dd>
+      <dd>Ranger Creek San Antonio Lager</dd>
+      <dd>Real Ale Brewer's Cut Black Quadrupel (BTL)</dd>
+      <dd>Real Ale Brewhouse Brown (BTL)</dd>
+      <dd>Real Ale Citrus Got Real Real Ale Commissar (BTL)</dd>
+      <dd>Real Ale Crispy Business (CAN)</dd>
+      <dd>Real Ale Fireman #4</dd>
+      <dd>Real Ale Fireman's Light (CAN)</dd>
+      <dd>Real Ale Mysterium Verum Lux Aeterna (BTL)</dd>
+      <dd>Real Ale Mysterium Verum: Magnum Trux (BTL)</dd>
+      <dd>Real Ale Tenebra Aeterna (BTL)</dd>
+      <dd>REAL Grapefruit & Black Raspberry Seltzer (CAN)</dd>
+      <dd>REAL Melon & Cucumber Seltzer (CAN)</dd>
+      <dd>REAL Peach & Pomegranate Seltzer (CAN)</dd>
+      <dd>REAL Tangerine & Yuzu Seltzer (CAN)</dd>
+      <dd>Rochefort 10 (BTL)</dd>
+      <dd>Rochefort 8 (BTL)</dd>
+      <dd>Saint Arnold Amber</dd>
+      <dd>Saint Arnold Art Car</dd>
+      <dd>Saint Arnold Art Car (CAN)</dd>
+      <dd>Saint Arnold Commitment (BTL)</dd>
+      <dd>Saint Arnold French Press (BTL)</dd>
+      <dd>Saint Arnold I Love You This Much (BTL)</dd>
+      <dd>Saint Arnold Low Dose (CAN)</dd>
+      <dd>Saint Arnold Spring Bock</dd>
+      <dd>Samuel Smith Organic Apricot (BTL)</dd>
+      <dd>Samuel Smith Organic Cherry (BTL)</dd>
+      <dd>Samuel Smith Organic Chocolate Stout (BTL)</dd>
+      <dd>Saucer Mimosa</dd>
+      <dd>Save the World Rex Servus</dd>
+      <dd>Second Pitch Admiral Stradling's Pub Ale</dd>
+      <dd>Second Pitch Careless Whisper</dd>
+      <dd>Sierra Nevada Big Little Thing</dd>
+      <dd>Sierra Nevada Big Little Thing (CAN)</dd>
+      <dd>Sierra Nevada Bigfoot (BTL)</dd>
+      <dd>Sierra Nevada Fantastic Haze (CAN)</dd>
+      <dd>Sierra Nevada Pale Ale (BTL)</dd>
+      <dd>Southern Star Bombshell Blonde</dd>
+      <dd>St. Bernardus Abt 12 (BTL)</dd>
+      <dd>Stone Arrogant Bastard Ale</dd>
+      <dd>Stone Enjoy By 04.20.21 (BTL)</dd>
+      <dd>Stone Fear.Movie.Lions Juicy Double IPA</dd>
+      <dd>Stone Fear.Movie.Lions Juicy Double IPA (CAN)</dd>
+      <dd>Stone Neverending Haze IPA</dd>
+      <dd>SweetWater 420 Extra Pale Ale</dd>
+      <dd>Sweetwater Troptimistic</dd>
+      <dd>The Bruery Mischief (CAN)</dd>
+      <dd>Thirsty Planet Thirsty Goat Amber</dd>
+      <dd>Two Robbers Orange Mango (CAN)</dd>
+      <dd>Two Robbers Peach Berry (CAN)</dd>
+      <dd>Two Robbers Pineapple Ginger (CAN)</dd>
+      <dd>Two Robbers Watermelon Cucumber (CAN)</dd>
+      <dd>Unibroue La Fin Du Monde</dd>
+      <dd>Unibroue La Terrible (BTL)</dd>
+      <dd>Unibroue Maudite (BTL)</dd>
+      <dd>Unibroue Trois Pistoles (BTL)</dd>
+      <dd>Untitled Art Double Strawberry Smoothie (CAN)</dd>
+      <dd>Untitled Art Florida Seltzer Blackberry Agave (CAN)</dd>
+      <dd>Untitled Art Hazy IIPA (CAN)</dd>
+      <dd>Untitled Art Non-Alcoholic Chocolate Milk Stout (CAN)</dd>
+      <dd>Untitled Art Non-Alcoholic Florida Weisse (CAN)</dd>
+      <dd>Untitled Art Peach Melba A La Mode Sour (CAN)</dd>
+      <dd>Untitled Art Pixie Mix: Pink Berry (CAN)</dd>
+      <dd>Victory Golden Monkey</dd>
+      <dd>Victory Sour Monkey</dd>
+      <dd>Weathered Souls Black is Beautiful (CAN)</dd>
+      <dd>Weihenstephaner Korbinian (BTL)</dd>
+      <dd>Wells Banana Bread (BTL)</dd>
+      <dd>Whitestone Hopwater (CAN)</dd>
+      <dd>Whitestone Pineapple Curuba</dd>
+      <dd>Whitestone Ray Ray Hazy IPA</dd>
+      <dd>Whitestone Velvet Nunchucks</dd>
+      <dd>WIld Basin Bitter Citrus Spritz (Can)</dd>
+      <dd>WIld Basin Habanero Pina Colada (Can)</dd>
+      <dd>Wild Mind Hanai Ohana (CAN)</dd>
+      <dd>Youngs Double Chocolate Stout (BTL)</dd>
+    </dl>
+  </body>
+</html>
