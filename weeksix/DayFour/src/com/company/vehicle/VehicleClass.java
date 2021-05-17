@@ -1,9 +1,18 @@
-package com.company.vehicle.;
+package com.company.vehicle;
 
 public class VehicleClass {
+// private constant (INTERNAL)
+    private static final int MAX_DOORS = 6;
+    private static final int MIN_DOORS = 1;
 
-    public String Color;
-    public int numberOfDoors;
+    // public constant (EXTERNAL)
+    public static final String TYPE_SPORTY = "sporty";
+    public static final String TYPE_SLOW = "family";
+
+    private String carType;
+
+    private String color;
+    private int numberOfDoors;
 // no-args constructor
     public VehicleClass(){
         color = "blue";
@@ -22,6 +31,40 @@ public class VehicleClass {
         this.color = color;
         this.numberOfDoors = numberOfDoors;
     }
+
+
+    // getters
+    public String getColor(){
+        return color;
+    }
+
+    public String getCarType(){
+        return carType();
+    }
+
+    public int getNumberOfDoors(){
+        return numberOfDoors;
+    }
+
+//    setter
+
+    public void setColor(String color){
+        this.color = color; }
+    public void setCarType(String carType){
+        this.getCarType = carType; }
+
+
+    public void setNumberOfDoors(int numberOfDoors){
+        if(MIN_DOORS >= 1 && numberOfDoors <= MAX_DOORS){
+            this.numberOfDoors = numberOfDoors;
+        }else{
+            this.numberOfDoors = -1;
+        }
+    }
+
+
+
+
 
     public void start(){
         System.out.println("Car is Starting");
