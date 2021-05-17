@@ -1,14 +1,3 @@
-const input = document.getElementsByClassName("userInput");
-const output = document.getElementsByClassName("output")
-const btn = document.getElementsByClassName("btn")
-
-
-btn.addEventListeneer("click" , (e)=>{
-  e.preventDefault();
-  const input = document.getElementsByClassName("userInput").value
-})
-
-
 const asyncFunction = async (city) => {
   let result;
   await fetch(`https://geocode.xyz/${city}?json=1`)
