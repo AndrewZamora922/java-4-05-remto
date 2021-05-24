@@ -3,23 +3,11 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-
-
-        public class AsciiChars {
-            public static void printNumbers()
-            {
-                // TODO: print valid numeric input
-            }
-
-            public static void printLowerCase()
-            {
-                // TODO: print valid lowercase alphabetic input
-            }
-
-            public static void printUpperCase()
-            {
-                // TODO: print valid uppercase alphabetic input
-            }
+        System.out.println("hello World");
         }
+
+    AsciiChars.printNumbers();
+    AsciiChars.printUpperCaseLetters();
+    AsciiChars.printLowerCaseLetters();
     }
-}
+
