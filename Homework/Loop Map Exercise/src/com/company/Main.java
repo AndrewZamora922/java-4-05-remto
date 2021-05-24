@@ -7,22 +7,6 @@ import java.util.Scanner;
 public class Main {
 
     public static <n> void main(String[] args) {
-//        Scanner userInput = new Scanner(System.in);
-//        int num = new ArrayList<>();
-
-//        int n,sum=0;
-//
-//        System.out.println("Enter 5 numbers: ");
-//         n = userInput.nextInt();
-//         int a[]= new int[n];
-//
-//        System.out.println("Your numbers are " + n);
-//
-//        for(int i = 0; i < n; i++){
-//            num += a[i];
-//            System.out.println("sum of " + n + " numbers is = " + sum);
-//        }
-
 
         int n,sum=0;
 
